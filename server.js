@@ -1,15 +1,19 @@
 //importando o express
-const express = require('express')
-const mongoose = require('mongoose')
+const express = require('express');
+const mongoose = require('mongoose');
+const requireDir = require('require-dir');
 
 //definindo uma contate e executar funcao express; iniciando o app
 const app = express();
 
 //inicionado o banco de dados
-mongoose.connect('mongodb://localhost:27017/mongoapi');
+mongoose.connect(
+    'mongodb://localhost:27017/mongoapi',
+    { useNewUrlParser: true }
+ );
 
 //registrando o model na aplicacao
-require('./src/models/Product');
+requireDir('./src/models');
 
 //criando uma rota
 app.get("/",(req, res) => {
