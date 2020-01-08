@@ -8,16 +8,26 @@ const app = express();
 
 //inicionado o banco de dados
 mongoose.connect(
-    'mongodb://localhost:27017/mongoapi',
+    'mongodb://localhost:27017/nodeapi',
     { useNewUrlParser: true }
  );
 
 //registrando o model na aplicacao
 requireDir('./src/models');
 
+//instanciando o objeto para validar se esta funcionando
+const Produto = mongoose.model('Product');
+
 //criando uma rota
 app.get("/",(req, res) => {
-    res.send("Hello mundo");
+
+    Produto.create({ 
+        title: 'primeito produto',
+        description: 'criando a primeira descricao',
+        url: 'www.mongoose.com'
+    })
+
+    return res.send("Hello mundo");
 });
 
 //fazendo a aplicacao ouvir a porta 3001
