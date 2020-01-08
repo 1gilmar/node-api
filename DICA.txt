@@ -19,5 +19,5 @@ docker run --name mongodb -p 27017:27017 -d mongo
 -Acesse o localhost:27017 para ver se esta rodando.
 -Pode ser usado o "Rubo 3t" para visualizar os dados via banco de dados.
 
-#instalando a dependencia mongoose
+#instalando a dependencia mongoose: Ele é um ORM de bando nao relacional
 npm install mongoose
