@@ -1,0 +1,4 @@
+npm init -y
+
+#criando a dependencia, micro framewrork que ajuda a lidar com rotas e views
+npm install express

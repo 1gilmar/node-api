@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/1gilmar/node-api/issues"
   },
-  "homepage": "https://github.com/1gilmar/node-api#readme"
+  "homepage": "https://github.com/1gilmar/node-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
