@@ -20,7 +20,8 @@
   "homepage": "https://github.com/1gilmar/node-api#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^4.13.20"
+    "mongoose": "^5.8.5",
+    "require-dir": "^1.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
