@@ -2,3 +2,19 @@ npm init -y
 
 #criando a dependencia, micro framewrork que ajuda a lidar com rotas e views
 npm install express
+
+#installando o nodemon para nao ter de ficar toda hora parando o server.js/servidor
+npm install -D nodemon
+
+- para rodar o script
+npm run dev
+
+#instalando mondodb via docker
+docker pull mongo
+
+- rodando mongodb via docker; vou dar o --nome de mongodb, usando a porta -p padrao e usando a imagen(-d) mongo
+docker run --name mongodb -p 27017:27017 -d mongo
+
+-docker ps "para mostrar a imagem rodando"
+-Acesse o localhost:27017 para ver se esta rodando.
+-Pode ser usado o "Rubo 3t" para visualizar os dados via banco de dados.

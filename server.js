@@ -10,7 +10,7 @@ app.get("/",(req, res) => {
 });
 
 app.get("/pessoa",(req, res) => {
-    res.send("tela relacionado a pessoa")
+    res.send("alterado para verifiar o nodemon sincronizar")
 });
 
 //fazendo a aplicacao ouvir a porta 3001
