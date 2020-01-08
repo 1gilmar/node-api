@@ -2,16 +2,9 @@ const express = require('express');
 
 const routes = express.Router();
 
+const ProductController = require('./controllers/ProductController');
+
 //criando uma rota
-routes.get("/",(req, res) => {
-
-//    Produto.create({ 
-//        title: 'primeito produto',
-//        description: 'criando a primeira descricao',
-//        url: 'www.mongoose.com'
-//    })
-
-    return res.send("Hello mundo");
-});
+routes.get("/produtos", ProductController.index);
 
 module.exports = routes;
