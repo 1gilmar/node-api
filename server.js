@@ -6,6 +6,9 @@ const requireDir = require('require-dir');
 //definindo uma contate e executar funcao express; iniciando o app
 const app = express();
 
+//permitir enviar dados via jason
+app.use(express.json());
+
 //inicionado o banco de dados
 mongoose.connect(
     'mongodb://localhost:27017/nodeapi',
