@@ -1,13 +1,13 @@
 //importando o express
 const express = require('express');
+const cors = require('cors')
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
 
 //definindo uma contate e executar funcao express; iniciando o app
 const app = express();
-
-//permitir enviar dados via jason
-app.use(express.json());
+app.use(express.json()); //permitir enviar dados via jason
+app.use(cors())          //permite para ser acessada publicamente
 
 //inicionado o banco de dados
 mongoose.connect(
