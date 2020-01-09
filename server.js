@@ -10,17 +10,14 @@ app.use(express.json()); //permitir enviar dados via jason
 app.use(cors())          //permite para ser acessada publicamente
 
 //inicionado o banco de dados
- //mongoose.connect(
- //   'mongodb://localhost:27017/nodeapi',
- //   { useNewUrlParser: true }
- //);
-
  mongoose.connect(
-     'mongodb+srv://deploy:<password>@cluster0-jzfpn.gcp.mongodb.net/test?retryWrites=true&w=majority', 
-     { useNewUrlParser: true }
+    'mongodb://localhost:27017/nodeapi',
+    { useNewUrlParser: true }
  );
 
-//registrando o model na aplicacao
+// 'mongodb+srv://deploy:senha@cluster0-jzfpn.gcp.mongodb.net/test?retryWrites=true&w=majority', 
+
+ //registrando o model na aplicacao
 requireDir('./src/models');
 
 //rotas
