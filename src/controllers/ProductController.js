@@ -4,8 +4,11 @@ const Produto = mongoose.model('Product');
 
 module.exports = {
     async index(req, res){
+        //pegando o parametro passado no browser e usando o valor default quando nao for passado nada.
+        const {page = 1} = req.query;
+
         //primeiro parametro do paginate e o where, segundo esta relacionado a paginacao.
-        const products = await Produto.paginate({},{page: 1, limit:10});
+        const products = await Produto.paginate({},{page, limit:10});
 
         return res.json(products);
     },
