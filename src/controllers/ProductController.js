@@ -29,5 +29,9 @@ module.exports = {
     },
 
     async destroy(req, res){
+        await Produto.findByIdAndRemove(req.params.id);
+
+        //retorna uma responsta de sucesso sem nenhum conteudo
+        return res.send()
     }
 }
