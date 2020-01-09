@@ -8,5 +8,6 @@ const ProductController = require('./controllers/ProductController');
 routes.get("/produtos", ProductController.index);
 routes.get("/produtos/:id", ProductController.show);
 routes.post("/produtos", ProductController.store);
+routes.put("/produtos/:id", ProductController.update);
 
 module.exports = routes;
