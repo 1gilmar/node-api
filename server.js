@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors')
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
+const db = require("./src/config/db");
 
 //definindo uma contate e executar funcao express; iniciando o app
 const app = express();
@@ -10,11 +11,7 @@ app.use(express.json()); //permitir enviar dados via jason
 app.use(cors())          //permite para ser acessada publicamente
 
 //inicionado o banco de dados
- mongoose.connect(
-  //  'mongodb://localhost:27017/nodeapi',
-  "mongodb+srv://root:jiraspiom@cluster0-2gq4v.gcp.mongodb.net/test?retryWrites=true&w=majority",
-    { useNewUrlParser: true }
- );
+ mongoose.connect(db.mongoURI, { useNewUrlParser: true });
 
 // 'mongodb+srv://deploy:senha@cluster0-jzfpn.gcp.mongodb.net/test?retryWrites=true&w=majority', 
 
