@@ -1,6 +1,7 @@
 # node-api
 
-npm init -y
+criando o projeto 
+- npm init -y
 
 criando a dependencia, micro framewrork que ajuda a lidar com rotas e views
 - npm install express
