@@ -11,6 +11,7 @@ installando o nodemon para nao ter de ficar toda hora parando o server.js/servid
 
 para rodar o script
 - npm run dev
+- http://localhost:3001/api/
 
 instalando mondodb via docker
 - docker pull mongo
