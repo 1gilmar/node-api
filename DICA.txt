@@ -28,4 +28,7 @@ npm install require-dir
 #instalar o https://insomnia.rest/ para verificar os registro retorados em json.
 
 #instalar o modulo mongoose-paginate
+- npm install mongoose-paginate
+
 npm install mongoose-paginate
+- npm install cors
