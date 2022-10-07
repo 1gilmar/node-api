@@ -22,7 +22,7 @@ requireDir('./src/models');
 app.use('/api', require('./src/routes'));
 
 //fazendo a aplicacao ouvir a porta 3001
-const PORTA = process.env.port || 3001
+const PORTA = process.env.port || 8080
 app.listen(PORTA, ()=> {
     console.log(`Servidor rodando na porta ${PORTA}`)
 });
